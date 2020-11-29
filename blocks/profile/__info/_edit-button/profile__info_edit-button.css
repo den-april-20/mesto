@@ -1,5 +1,5 @@
 .profile__info_edit-button {
-    background-image: url('./blocks/profile/__info/_edit-button/edir-button.png');
+    background-image: url('./edit-button.png');
     width: 24px;
     height: 24px;
     background-repeat: no-repeat;

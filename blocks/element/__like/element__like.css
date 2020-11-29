@@ -10,6 +10,6 @@
 }
 
 .element__like-active {
-    background-image: url('/blocks/element/__like/like-active.svg');
+    background-image: url('./like-active.svg');
     background-repeat: no-repeat;
 }
