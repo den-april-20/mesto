@@ -1,0 +1,15 @@
+.element__like {
+    width: 20.76px;
+    height: 18.13px;
+    margin: auto 1.13px auto auto;
+    cursor: pointer;
+}
+
+.element__like:hover {
+    opacity: 0.5;
+}
+
+.element__like-active {
+    background-image: url('/blocks/element/__like/like-active.svg');
+    background-repeat: no-repeat;
+}
