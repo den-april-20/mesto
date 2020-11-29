@@ -1,4 +1,4 @@
-.popup__information_input-name {
+.popup__information_input_name {
     width: 358px;
     height: 27px;
     border: none;
@@ -10,7 +10,7 @@
 }
 
 @media screen and (max-width: 660px) {
-    .popup__information_input-name {
+    .popup__information_input_name {
         margin-bottom: 30px;
         width: 238px;
       }

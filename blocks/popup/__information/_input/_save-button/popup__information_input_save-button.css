@@ -1,4 +1,4 @@
-.popup__information_save-button {
+.popup__information_input_save-button {
     border: none;
     margin-top: 48px;
     width: 358px;
@@ -10,12 +10,12 @@
     cursor: pointer;
 }
 
-.popup__information_save-button:hover {
+.popup__information_input_save-button:hover {
     opacity: 0.8;
 }
 
 @media screen and (max-width: 660px) {
-    .popup__information_save-button {
+    .popup__information_input_save-button {
         width: 238px;
         height: 46px;
         margin-top: 45px;

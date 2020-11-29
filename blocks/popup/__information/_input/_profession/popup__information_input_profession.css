@@ -1,4 +1,4 @@
-.popup__information_input-profession {
+.popup__information_input_profession {
     width: 358px;
     height: 27px;
     border: none;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 660px) {
-    .popup__information_input-profession {
+    .popup__information_input_profession {
         width: 238px;
       }
   }
