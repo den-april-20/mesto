@@ -5,7 +5,7 @@ const editButtonNode = document.querySelector('.profile__edit-button');
 editButtonNode.addEventListener('click', handlerEditButtonClick);
 
 function handlerEditButtonClick () {
-    popupNode.classList.add('popup__visible');
+    popupNode.classList.add('popup_visible');
 }
 
 
@@ -15,7 +15,7 @@ const closeButtonNode = document.querySelector('.popup__close-button');
 closeButtonNode.addEventListener('click', handlerCloseButtonClick);
 
 function handlerCloseButtonClick () {
-    popupNode.classList.remove('popup__visible');
+    popupNode.classList.remove('popup_visible');
 }
 
 
@@ -32,21 +32,21 @@ function handlerSaveButtonNode () {
     if (inputNameNode.value != ('') && inputProfessionNode.value !=('')) {
     infoNameNode.textContent = inputNameNode.value;
     infoProfessionNode.textContent = inputProfessionNode.value;
-    popupNode.classList.remove('popup__visible');
+    popupNode.classList.remove('popup_visible');
     inputNameNode.value = ('');
     inputProfessionNode.value = ('');
     } else if (inputNameNode.value != ('') && inputProfessionNode.value == ('')) {
         infoNameNode.textContent = inputNameNode.value;
-        popupNode.classList.remove('popup__visible');
+        popupNode.classList.remove('popup_visible');
         inputNameNode.value = ('');
         inputProfessionNode.value = ('');
     } else if (inputNameNode.value == ('') && inputProfessionNode.value != ('')) {
         infoProfessionNode.textContent = inputProfessionNode.value;
-        popupNode.classList.remove('popup__visible');
+        popupNode.classList.remove('popup_visible');
         inputNameNode.value = ('');
         inputProfessionNode.value = ('');
     } else {
-        popupNode.classList.remove('popup__visible');
+        popupNode.classList.remove('popup_visible');
         inputNameNode.value = ('');
         inputProfessionNode.value = ('');
     }

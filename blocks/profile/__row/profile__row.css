@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: row;
     margin: 0;
-    width: 336px;
+    width: auto;
     margin-top: 22px;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 676px) {
     .profile__row {
         width: 282px;
       }

@@ -5,7 +5,7 @@
     margin-left: 36px;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 676px) {
     .popup__information {
         margin-left: 22px;
         margin-top: 0px;

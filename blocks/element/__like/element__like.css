@@ -8,8 +8,3 @@
 .element__like:hover {
     opacity: 0.5;
 }
-
-.element__like-active {
-    background-image: url('./like-active.svg');
-    background-repeat: no-repeat;
-}

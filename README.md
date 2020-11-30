@@ -2,6 +2,8 @@
 
 ### Обзор
 
+* [Ссылка на проект в GitPage](https://den-april-20.github.io/mesto/)
+
 * Figma
 * Картинки
 

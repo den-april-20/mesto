@@ -1,14 +1,14 @@
 .elements {
     display: grid;
     margin: 51px auto 0 auto;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fit, minmax(208px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
     row-gap: 20px;
     column-gap: 17px;
     max-width: 880px;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 676px) {
     .elements {
         justify-items: center;
         grid-template-rows: repeat(6, 1fr);

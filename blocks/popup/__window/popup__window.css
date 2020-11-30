@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 676px) {
     .popup__window {
         height: 322px;
         width: 282px;
