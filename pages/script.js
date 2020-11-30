@@ -1,6 +1,6 @@
 /* При нажатии на EditButton открывается Popup  */
 const popupNode = document.querySelector('.popup');
-const editButtonNode = document.querySelector('.profile__row_edit-button');
+const editButtonNode = document.querySelector('.profile__edit-button');
 
 editButtonNode.addEventListener('click', handlerEditButtonClick);
 
@@ -20,7 +20,7 @@ function handlerCloseButtonClick () {
 
 
 /* При нажатии кнопки "Сохранить" в Popup, имя и профессия сохраняются на главной странице */
-const infoNameNode = document.querySelector('.profile__row_name');
+const infoNameNode = document.querySelector('.profile__name');
 const infoProfessionNode = document.querySelector('.profile__info_profession')
 const inputNameNode = document.querySelector('.popup__information_input_name');
 const inputProfessionNode = document.querySelector('.popup__information_input_profession')

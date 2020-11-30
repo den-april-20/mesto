@@ -1,4 +1,4 @@
-.profile__row_edit-button {
+.profile__edit-button {
     background-image: url('./edit-button.png');
     width: 24px;
     height: 24px;
@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 660px) {
-    .profile__row_edit-button {
+    .profile__edit-button {
         width: 18px;
         height: 18px;
         margin-right: 19px;
