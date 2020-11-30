@@ -21,10 +21,10 @@ function handlerCloseButtonClick () {
 
 /* При нажатии кнопки "Сохранить" в Popup, имя и профессия сохраняются на главной странице */
 const infoNameNode = document.querySelector('.profile__name');
-const infoProfessionNode = document.querySelector('.profile__info_profession')
-const inputNameNode = document.querySelector('.popup__information_input_name');
-const inputProfessionNode = document.querySelector('.popup__information_input_profession')
-const saveButtonNode = document.querySelector('.popup__information_input_save-button');
+const infoProfessionNode = document.querySelector('.profile__profession')
+const inputNameNode = document.querySelector('.popup__name');
+const inputProfessionNode = document.querySelector('.popup__profession')
+const saveButtonNode = document.querySelector('.popup__save-button');
 
 saveButtonNode.addEventListener('click', handlerSaveButtonNode);
 
