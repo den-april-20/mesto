@@ -1,4 +1,4 @@
-.profile__info_row {
+.profile__row {
     display: flex;
     flex-direction: row;
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 660px) {
-    .profile__info_row {
+    .profile__row {
         width: 282px;
       }
   }

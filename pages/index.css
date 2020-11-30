@@ -17,11 +17,11 @@
 @import url('../blocks/profile/profile.css');
 @import url('../blocks/profile/__avatar/profile__avatar.css');
 @import url('../blocks/profile/__info/profile__info.css');
-@import url('../blocks/profile/__info/_row/_edit-button/profile__info_row_edit-button.css');
-@import url('../blocks/profile/__info/_row/_name/profile__info_row_name.css');
+@import url('../blocks/profile/__row/_edit-button/profile__row_edit-button.css');
+@import url('../blocks/profile/__row/_name/profile__row_name.css');
 @import url('../blocks/profile/__info/_profession/profile__info_profession.css');
 @import url('../blocks/profile/__add-button/profile__add-button.css');
-@import url('../blocks/profile/__info/_row/profile__info_row.css');
+@import url('../blocks/profile/__row/profile__row.css');
 @import url('../blocks/elements/elements.css');
 @import url('../blocks/element/element.css');
 @import url('../blocks/element/__image/element__image.css');

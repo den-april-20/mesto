@@ -1,4 +1,4 @@
-.profile__info_row_edit-button {
+.profile__row_edit-button {
     background-image: url('./edit-button.png');
     width: 24px;
     height: 24px;
@@ -11,12 +11,12 @@
     cursor: pointer;
 }
 
-.profile__info_row_edit-button:hover {
+.profile__row_edit-button:hover {
     opacity: 0.6;
 }
 
 @media screen and (max-width: 660px) {
-    .profile__info_row_edit-button {
+    .profile__row_edit-button {
         width: 18px;
         height: 18px;
         margin-right: 19px;
