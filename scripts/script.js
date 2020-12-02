@@ -3,8 +3,8 @@ let popupNode = document.querySelector('.popup');
 let popupCloseButtonNode = document.querySelector('.popup__close-button');
 let profileNameNode = document.querySelector('.profile__name');
 let profileProfessionNameNode = document.querySelector('.profile__profession');
-let popupNameNode = document.querySelector('.popup__name');
-let popupProfessionNode = document.querySelector('.popup__profession');
+let popupNameNode = document.querySelector('.popup__input_name');
+let popupProfessionNode = document.querySelector('.popup__input_profession');
 let popupWindow = document.querySelector('.popup__window')
 
 

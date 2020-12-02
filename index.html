@@ -16,11 +16,11 @@
         <div class="profile__info">
             <div class="profile__row">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button aria-label="edit button" class="profile__edit-button"></button>
+                <button aria-label="edit button" type="button" class="profile__edit-button"></button>
             </div>
             <p class="profile__profession">Исследователь океана</p>
         </div>
-        <button aria-label="add button" class="profile__add-button"></button>
+        <button aria-label="add button" type="button" class="profile__add-button"></button>
     </section>
     <section class="elements">
         <article class="element">
@@ -72,11 +72,11 @@
     </footer>
    <div class="popup">
         <form name="window" class="popup__window">
-            <button type="submit" class="popup__close-button"></button>
+            <button type="button" class="popup__close-button"></button>
             <h2 class="popup__heading">Редактировать профиль</h2>
             <div class="popup__information">
-                <input name="name" type="text" class="popup__name" placeholder="Введите имя">
-                <input name="profession" type="text" class="popup__profession" placeholder="Введите профессию">
+                <input name="name" type="text" class="popup__input popup__input_name" placeholder="Введите имя">
+                <input name="profession" type="text" class="popup__input popup__input_profession" placeholder="Введите профессию">
                 <button type="submit" class="popup__save-button">Сохранить</button>
             </div>
         </form>
