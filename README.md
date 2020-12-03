@@ -4,7 +4,7 @@
 
 ### Обзор
 
-* [Ссылка на проект в GitPage](https://den-april-20.github.io/mesto/index.html)
+* [Ссылка на проект в GitPage](https://den-april-20.github.io/mesto/)
 
 Использовал адаптивную верстку для удобного пользования как на ПК, так и на мобильных устройствах.
 

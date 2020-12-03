@@ -13,8 +13,6 @@
 @import url('../blocks/popup/_visible/popup_visible.css');
 @import url('../blocks/popup/__window/popup__window.css');
 @import url('../blocks/popup/__input/popup__input.css');
-@import url('../blocks/popup/__input/_position/popup__input_position_top.css');
-@import url('../blocks/popup/__input/_position/popup__input_position_bottom.css');
 @import url('../blocks/profile/profile.css');
 @import url('../blocks/profile/__avatar/profile__avatar.css');
 @import url('../blocks/profile/__info/profile__info.css');
