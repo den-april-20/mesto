@@ -1,0 +1,18 @@
+.popup-gallery__close-button {
+    background-image: url('../../../images/close-button.svg');
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    transform: rotate(-45deg);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 41px;
+    margin: auto;
+    margin-right: -40px;
+}
+
+.popup-gallery__close-button:hover {
+    opacity: 0.6;
+}

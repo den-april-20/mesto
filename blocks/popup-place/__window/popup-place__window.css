@@ -1,0 +1,13 @@
+.popup-place__window {
+    background-color: #FFFFFF;
+    width: 430px;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 676px) {
+    .popup-place__window {
+        width: 282px;
+      }
+  }

@@ -1,0 +1,6 @@
+.popup-gallery__window {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 75vw;
+}
