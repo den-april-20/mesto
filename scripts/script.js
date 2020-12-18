@@ -13,7 +13,7 @@ const popupCloseButtonAdd = document.querySelector('.popup__close-button#add_clo
 const popupWindowEdit = document.querySelector('.popup__window#edit_window');
 const popupWindowAdd = document.querySelector('.popup__window#add_window');
 const elements = document.querySelector('.elements');
-const popupCloseButtonGallery = document.querySelector('.popup__close-button_gallery');
+const popupCloseButtonGallery = document.querySelector('.popup__close-button-gallery');
 const popupGallery = document.querySelector('.popup#gallery');
 
 
