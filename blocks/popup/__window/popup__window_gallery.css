@@ -1,4 +1,4 @@
-.gallery__window {
+.popup__window_gallery {
 	margin: auto;
 	display: flex;
 	flex-direction: column;

@@ -29,31 +29,31 @@
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
    <div class="popup" id="edit">
-        <form name="window" class="popup__window" id="edit">
-            <button type="button" class="popup__close-button" id="edit"></button>
-            <h2 class="popup__heading" id="edit">Редактировать профиль</h2>
-            <div class="popup__information" id="edit">
-                <input name="name" type="text" required class="popup__input popup__input_position_top" id="edit" placeholder="Введите имя">
-                <input name="profession" type="text" required class="popup__input popup__input_position_bottom" id="edit" placeholder="Введите профессию">
-                <button type="submit" class="popup__save-button" id="edit">Сохранить</button>
+        <form name="window" class="popup__window" id="edit_window">
+            <button type="button" class="popup__close-button" id="edit_close"></button>
+            <h2 class="popup__heading">Редактировать профиль</h2>
+            <div class="popup__information">
+                <input name="name" type="text" required class="popup__input popup__input_position_top" id="edit_top" placeholder="Введите имя">
+                <input name="profession" type="text" required class="popup__input popup__input_position_bottom" id="edit_bottom" placeholder="Введите профессию">
+                <button type="submit" class="popup__save-button">Сохранить</button>
             </div>
         </form>
     </div>
     <div class="popup" id="add">
-        <form name="window" class="popup__window" id="add">
-            <button type="button" class="popup__close-button" id="add"></button>
-            <h2 class="popup__heading" id="add">Новое место</h2>
-            <div class="popup__information" id="add">
-                <input name="name" type="text" required class="popup__input popup__input_position_top" id="add" placeholder="Название">
-                <input name="profession" type="text" required class="popup__input popup__input_position_bottom" id="add" placeholder="Ссылка на картинку">
-                <button type="submit" class="popup__save-button" id="add">Создать</button>
+        <form name="window" class="popup__window" id="add_window">
+            <button type="button" class="popup__close-button" id="add_close"></button>
+            <h2 class="popup__heading">Новое место</h2>
+            <div class="popup__information">
+                <input name="name" type="text" required class="popup__input popup__input_position_top" id="add_top" placeholder="Название">
+                <input name="profession" type="text" required class="popup__input popup__input_position_bottom" id="add_bottom" placeholder="Ссылка на картинку">
+                <button type="submit" class="popup__save-button">Создать</button>
             </div>
         </form>
     </div>
-    <div class="gallery">
-        <div class="gallery__window">
-            <button type="button" class="gallery__close-button"></button>
-            <img class="gallery__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="Фото">
+    <div class="popup" id="gallery">
+        <div class="popup__window_gallery">
+            <button type="button" class="popup__close-button_gallery"></button>
+            <img class="popup__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="Фото">
         </div>
     </div>
     <script src="./scripts/initial-cards.js"></script>

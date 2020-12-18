@@ -1,20 +1,20 @@
 const profileEditButton = document.querySelector('.profile__edit-button');
 const popupEdit = document.querySelector('.popup#edit');
-const popupInputPositionTopEdit = document.querySelector('.popup__input_position_top#edit');
-const popupInputPositionBottomEdit = document.querySelector('.popup__input_position_bottom#edit');
-const popupInputPositionTopAdd = document.querySelector('.popup__input_position_top#add');
-const popupInputPositionBottomAdd = document.querySelector('.popup__input_position_bottom#add');
+const popupInputPositionTopEdit = document.querySelector('.popup__input_position_top#edit_top');
+const popupInputPositionBottomEdit = document.querySelector('.popup__input_position_bottom#edit_bottom');
+const popupInputPositionTopAdd = document.querySelector('.popup__input_position_top#add_top');
+const popupInputPositionBottomAdd = document.querySelector('.popup__input_position_bottom#add_bottom');
 const profileName = document.querySelector('.profile__name');
 const profileProfession = document.querySelector('.profile__profession');
-const popupCloseButtonEdit = document.querySelector('.popup__close-button#edit');
+const popupCloseButtonEdit = document.querySelector('.popup__close-button#edit_close');
 const popupAddButton = document.querySelector('.profile__add-button');
 const popupAdd = document.querySelector('.popup#add');
-const popupCloseButtonAdd = document.querySelector('.popup__close-button#add');
-const popupWindowEdit = document.querySelector('.popup__window#edit');
-const popupWindowAdd = document.querySelector('.popup__window#add');
+const popupCloseButtonAdd = document.querySelector('.popup__close-button#add_close');
+const popupWindowEdit = document.querySelector('.popup__window#edit_window');
+const popupWindowAdd = document.querySelector('.popup__window#add_window');
 const elements = document.querySelector('.elements');
-const galleryCloseButton = document.querySelector('.gallery__close-button');
-const gallery = document.querySelector('.gallery');
+const popupCloseButtonGallery = document.querySelector('.popup__close-button_gallery');
+const popupGallery = document.querySelector('.popup#gallery');
 
 
 /* Функция открывает Edit Popup и переносит Имя и Профессию из профиля в поля Edit Popup */
@@ -78,27 +78,27 @@ function composeElement(item){
 
 
     /* Функция берет значение src у element__image и отдает gallery__image. */
-    function galleryImageSrc(e){
+    function popupImageSrc(e){
         let elementImageSrc = e.target.closest('.element__image').getAttribute('src');
-        let imageSetSrc = document.querySelector('.gallery__image');
+        let imageSetSrc = document.querySelector('.popup__image');
         imageSetSrc.setAttribute('src', elementImageSrc);
     }
 
-    /* Функция закрывает галлерею. */
-    function handlerGalleryCloseButtonClick() {
-        gallery.classList.remove('gallery_visible');
-    }
-
     elementImage.addEventListener('click', galleryVisible); 
-    elementImage.addEventListener('click', galleryImageSrc); 
-    galleryCloseButton.addEventListener('click', handlerGalleryCloseButtonClick);
+    elementImage.addEventListener('click', popupImageSrc); 
+    popupCloseButtonGallery.addEventListener('click', handlerGalleryCloseButtonClick);
 
     return elementItem;
 }
 
 /* Функция открывает галлерею. */
 function galleryVisible(){
-    gallery.classList.add('gallery_visible');
+    popupGallery.classList.add('popup_visible');
+}
+
+/* Функция закрывает галлерею. */
+function handlerGalleryCloseButtonClick() {
+    popupGallery.classList.remove('popup_visible');
 }
 
 /* Функция удаляет конкретный элемент. */ 
