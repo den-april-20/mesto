@@ -35,7 +35,7 @@ function closeProfilePopup() {
 buttonCloseProfile.addEventListener('click', closeProfilePopup);
 
 //функия, меняющая значения профиля
-function handleProfileSubmit (evt) {
+function handleProfileSubmit(evt) {
     evt.preventDefault();
     
     nameProfile.textContent = nameInput.value;
@@ -69,39 +69,10 @@ function closePopupAddCard() {
 
 buttonClosePopupAddCard.addEventListener('click', closePopupAddCard);
 
-//массив начальных карточек
-const initialCards = [
-    {
-        name: 'Архыз',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-    },
-    {
-        name: 'Челябинская область',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-    },
-    {
-        name: 'Иваново',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-    },
-    {
-        name: 'Камчатка',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-    },
-    {
-        name: 'Холмогорский район',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-    },
-    {
-        name: 'Байкал',
-        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-    }
-];
-
 //нахождение переменных для добавления начальных и новых карточек
 const listItems = document.querySelector('.elements__items');
 const templateElement = document.querySelector('.template');
 const formAddCard = document.querySelector('.popup_place_addcards');
-const addButtonCard = document.querySelector('.form__button-submit_place_addcards');
 const newElementName = document.querySelector('.form__input_card_image-name');
 const newElementPhoto = document.querySelector('.form__input_card_image-link');
 //переменные для попапа с увеличением картинки
@@ -135,7 +106,7 @@ function showPhoto(name, link) {
 } 
 
 //функция закрытия попапа с увеличенной фотографией
-function closePopupPhoto () {
+function closePopupPhoto() {
     popupPhoto.classList.remove('overlay');
     closePopup(popupPhoto);
 }
@@ -152,14 +123,14 @@ function createCard({name, link}) {
 
     nameCard.textContent = name;
     imageCard.src = link;
-    imageCard.alt = `Фотография ${name}`
+    imageCard.alt = `Фотография ${name}`;
 
     buttonLike.addEventListener('click',  handleLikeClick);
     buttonRemove.addEventListener('click', handleRemoveCard);
     imageCard.addEventListener('click', () => {
         showPhoto(nameCard.textContent, imageCard.src);
     });
-    return newElement
+    return newElement;
 }
 
 //функция добавления начальных карточек
