@@ -1,19 +1,4 @@
 .elements {
-    display: grid;
-    margin: 51px auto 0 auto;
-    grid-template-rows: repeat(auto-fit, minmax(208px, 1fr));
-    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
-    row-gap: 20px;
-    column-gap: 17px;
-    max-width: 880px;
+    margin: auto;
+    margin-top: 36px;
 }
-
-@media screen and (max-width: 676px) {
-    .elements {
-        justify-items: center;
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        margin-top: 36px;
-      }
-  }
