@@ -5,4 +5,5 @@
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
+    padding: 0 36px;
 }
