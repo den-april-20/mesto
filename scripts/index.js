@@ -9,12 +9,14 @@ const jobInput = profileForm.querySelector('.form__input_profile_profession');
 const nameProfile = document.querySelector('.profile__name');
 const jobProfile = document.querySelector('.profile__profession');
 const formButtonSubmit = profileForm.querySelector('.form__button-submit');
+const formPlaceAddcards = document.querySelector('.form_place_addcards');
 
 //Функция закрытия любого попапа
-function closePopup(popup) {
+function closePopup() {
     const popupClose = document.querySelector('.popup_opened');
     popupClose.classList.remove('popup_opened');
     document.removeEventListener('keydown', closePopupEsc);
+    document.removeEventListener('click', closePopupOverlay);
 }
 
 function closePopupEsc(evt) {
@@ -23,21 +25,22 @@ function closePopupEsc(evt) {
     }
   }
 
-profilePopupAll.forEach((popup) => {
-    popup.addEventListener('click', (evt) => {
-    if (evt.target.classList.contains('popup_opened')) {
-        closePopup(popup);
-    }
-    if (evt.target.classList.contains('popup__button-close')) {
-        closePopup(popup)
-    }
+function closePopupOverlay(evt) {
+    profilePopupAll.forEach((popup) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup);
+        }
+        if (evt.target.classList.contains('popup__button-close')) {
+            closePopup(popup);
+        }
     })
-})
+}
 
 //Функция открытия любого попапа
 function openPopup(popup) {
     popup.classList.add('popup_opened');
     document.addEventListener('keydown', closePopupEsc);
+    document.addEventListener('click', closePopupOverlay);
 }
 
 //Функция открытия формы, редактирующий профиль
@@ -51,12 +54,7 @@ function openProfilePopup() {
 
 buttonEditProfile.addEventListener('click', openProfilePopup);
 
-//Функция зактрытия формы, редактирующий профиль
-function closeProfilePopup() {
-    closePopup(profilePopup);
-}
-
-buttonCloseProfile.addEventListener('click', closeProfilePopup);
+buttonCloseProfile.addEventListener('click', closePopup);
 
 //Функия, меняющая значения профиля
 function handleProfileSubmit(evt) {
@@ -65,7 +63,7 @@ function handleProfileSubmit(evt) {
     nameProfile.textContent = nameInput.value;
     jobProfile.textContent = jobInput.value;
 
-    closeProfilePopup();
+    closePopup(profilePopup);
 }
 
 profileForm.addEventListener('submit', handleProfileSubmit);
@@ -80,14 +78,9 @@ const inputCardImage = document.querySelector('.form__input_card_image-link');
 //Функция открытия формы добавления карточек
 function openPopupAddCard() {
     openPopup(popupAddCard);
-    reset();
+    formPlaceAddcards.reset();
     disableValidation(imageForm, validationConfig);
 };
-
-function reset() {
-    newElementName.value = '';
-    newElementPhoto.value = '';
-}
 
 buttonAddCard.addEventListener('click', openPopupAddCard);
 
@@ -115,7 +108,7 @@ const imagePopup = popupPhoto.querySelector('.popup__image');
 
 //Функция для лайка картинки
 function handleLikeClick(event) {
-    const eventTarget =event.target;
+    const eventTarget = event.target;
     eventTarget.classList.toggle('element__button-like_active');
 }
 
