@@ -26,11 +26,10 @@ function closePopupEsc(evt) {
   }
 
 function closePopupOverlay(evt) {
-    profilePopupAll.forEach((popup) => {
-        if (evt.target.classList.contains('popup_opened')) {
-            closePopup(popup);
-        }
-        if (evt.target.classList.contains('popup__button-close')) {
+    const popupOpened = document.querySelectorAll('.popup_opened');
+    popupOpened.forEach((popup) => {
+        if (evt.target.classList.contains('popup_opened') || 
+        evt.target.classList.contains('popup__button-close')) {
             closePopup(popup);
         }
     })
