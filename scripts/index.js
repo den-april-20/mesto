@@ -26,13 +26,10 @@ function closePopupEsc(evt) {
   }
 
 function closePopupOverlay(evt) {
-    const popupOpened = document.querySelectorAll('.popup_opened');
-    popupOpened.forEach((popup) => {
         if (evt.target.classList.contains('popup_opened') || 
         evt.target.classList.contains('popup__button-close')) {
-            closePopup(popup);
+            closePopup();
         }
-    })
 }
 
 //Функция открытия любого попапа
