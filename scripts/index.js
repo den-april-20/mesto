@@ -22,7 +22,7 @@ const addLink = document.querySelector('.form__input_card_image-link');
 
 
 function createNewElementClassCard(item) {
-    const addCard = new Card(item, 'template', openPopup);
+    const addCard = new Card(item, 'template', handleCardClick);
     return addCard.generateCard();
 }
 
@@ -37,6 +37,7 @@ function closePopup() {
     const popupClose = document.querySelector('.popup_opened');
     popupClose.classList.remove('popup_opened');
     document.removeEventListener('keydown', closePopupEsc);
+    document.removeEventListener('click', closePopupOverlay);
 }
 
 //Функция закрытия попапа по нажатию Escape
@@ -49,7 +50,7 @@ function closePopupEsc(evt) {
   //Фунция закрытия попапа по нажатию на оверлей
 function closePopupOverlay(evt) {
         if (evt.target.classList.contains('popup_opened') || 
-        evt.target.classList.contains('popup__button-close')) {
+        evt.target.classList.contains('popup__image-close')) {
             closePopup();
         }
 }
@@ -80,6 +81,13 @@ function handleProfileSubmit(evt) {
     jobProfile.textContent = jobInput.value;
     closePopup(profilePopup);
 }
+
+function handleCardClick(name, link) {
+        const imagePopup = document.querySelector('.popup_place_image');
+        imagePopup.querySelector('.popup__image').src = link;
+        imagePopup.querySelector('.popup__name').textContent = name;
+        openPopup(imagePopup);
+  }
 
 const newValidClassImgForm = new FormValidator(validationConfig, formPlaceAddcards);
 newValidClassImgForm.enableValidation();

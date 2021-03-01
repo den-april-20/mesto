@@ -1,18 +1,18 @@
 export default class FormValidator {
-    constructor(config, profileForm) {
+    constructor(config, form) {
         this._config = config;
-        this._profileForm = profileForm;
+        this._form = form;
     }
 
     _showInputError(inputElement) {
-        const error = this._profileForm.querySelector(`#${inputElement.id}-error`);
+        const error = this._form.querySelector(`#${inputElement.id}-error`);
         error.textContent = inputElement.validationMessage;
         error.classList.add(this._config.errorClass);
         inputElement.classList.add(this._config.inputErrorClass);
     }
 
     _hideInputError(inputElement) {
-        const error = this._profileForm.querySelector(`#${inputElement.id}-error`);
+        const error = this._form.querySelector(`#${inputElement.id}-error`);
         error.textContent = '';
         inputElement.classList.remove(this._config.errorClass);
         inputElement.classList.remove(this._config.inputErrorClass);
@@ -43,25 +43,25 @@ export default class FormValidator {
     }
 
     _setEventListeners() {
-        this._inputsList = Array.from(this._profileForm.querySelectorAll(this._config.inputSelector));
-        this._button = this._profileForm.querySelector(this._config.submitButtonSelector);
+        this._inputsList = Array.from(this._form.querySelectorAll(this._config.inputSelector));
+        this._button = this._form.querySelector(this._config.submitButtonSelector);
 
         this._inputsList.forEach((inputElement) => {
             inputElement.addEventListener('input', () => {
                 this._checkInputValidity(inputElement);
-                this._setButtonState(this._profileForm.checkValidity())
+                this._setButtonState(this._form.checkValidity())
             });
         });
     }
 
     quickValidationCheck() {
         this._disableValidation()
-        this._setButtonState(this._profileForm.checkValidity())
+        this._setButtonState(this._form.checkValidity())
     }
 
     enableValidation() {
         this._setEventListeners();
-        this._profileForm.addEventListener('submit', (evt) => {
+        this._form.addEventListener('submit', (evt) => {
             evt.preventDefault();
         });
     }
